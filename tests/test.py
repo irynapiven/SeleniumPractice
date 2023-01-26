@@ -61,6 +61,5 @@ class TestElements:
         state_city_item = StatesCityDropDown(self.driver)
         test = state_city_item.fill_states_and_city()
 
-        time.sleep(10)
-        page.find_submit_button().click()
+        page.find_submit_button()
         time.sleep(10)

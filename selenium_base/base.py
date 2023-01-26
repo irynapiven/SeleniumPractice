@@ -54,6 +54,7 @@ class SeleniumBase:
     def go_to_element(self, element):
         self.driver.execute_script("arguments[0].scrollIntoView();", element)
 
+
     def action_double_click(self, element):
         action = ActionChains(self.driver)
         action.double_click(element)
