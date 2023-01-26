@@ -48,6 +48,9 @@ class SeleniumBase:
         return self.wait.until(ec.element_to_be_clickable((self.get_selenium_by(find_by), locator)),
                                locator_name).click()
 
+    def click_on_element(self, element):
+        self.driver.execute_script("arguments[0].click();", element)
+
     def go_to_element(self, element):
         self.driver.execute_script("arguments[0].scrollIntoView();", element)
 

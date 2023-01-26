@@ -32,7 +32,8 @@ class Elements(SeleniumBase):
         return self.is_visible('css', self.current_address)
 
     def find_submit_button(self):
-        self.action_double_click('css', self.submit_button)
+        item = self.is_present('css', self.submit_button)
+        self.go_to_element(item)
         time.sleep(5)
 
     def fill_all_fields(self):
